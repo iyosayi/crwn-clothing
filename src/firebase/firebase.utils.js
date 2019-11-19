@@ -51,12 +51,4 @@ const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: "select_account" });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
-//Twitter Auth
-// const twitter = new firebase.auth.TwitterAuthProvider();
-// firebase.auth().signInWithPopup(twitter).then(result => {
-//   let token = result.credential.accessToken
-//   let secret = result.credential.secret
-//   let user = result.user
-// })
-
 export default firebase;

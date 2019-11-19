@@ -9,14 +9,14 @@ import CartDrop from "../cart-dropdown/CartDrop";
 function Header({ currentUser, isHidden }) {
   return (
     <div className="header">
-      <Link className="logo-container" to="/">
+      <Link className="logo-container" title="Homepage" to="/">
         <Logo className="logo" />
       </Link>
       <div className="options">
-        <Link className="option" to="/shop">
+        <Link className="option" title="Shop" to="/shop">
           SHOP
         </Link>
-        <Link className="option" to="/shop">
+        <Link className="option" title="Contact" to="/shop">
           CONTACT
         </Link>
         {currentUser ? (
@@ -24,7 +24,7 @@ function Header({ currentUser, isHidden }) {
             SIGN OUT
           </div>
         ) : (
-          <Link to="/signin" className="option">
+          <Link to="/signin" title="Sign in" className="option">
             SIGN IN
           </Link>
         )}
